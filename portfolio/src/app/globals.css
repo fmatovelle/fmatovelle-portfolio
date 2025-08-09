@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* === Tailwind v4: tokens de diseño === */
+@theme {
+  --color-primary: #000;         /* negro puro */
+  --color-secondary: #f5f5f5;    /* gris muy claro para fondos */
+  --color-muted: #666666;        /* texto suave */
+  --radius-2xl: 1.5rem;          /* esquinas grandes */
+  --spacing-section: 8rem;       /* padding vertical generoso */
+}
+
+/* extras */
+html { scroll-behavior: smooth; }
+
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
